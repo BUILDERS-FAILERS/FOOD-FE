@@ -4,7 +4,7 @@
 Build a video streaming platform from scratch, focusing on frontend development using JavaScript and limited resources for video storage.
 
 ## Frontend Development
-1. **Framework:** Choose a frontend framework (React, Angular, Vue.js) for building interactive user interfaces.
+1. **Framework:** Choose a frontend framework (Nextjs) for building interactive user interfaces.
 2. **User Authentication:** Implement user registration, login, and account management using Firebase Authentication.
 3. **Video Playback:** Integrate a video player library (Plyr, Video.js) for seamless video playback.
 4. **Video Listing and Search:** Create a user-friendly interface for listing and searching videos using HTML, CSS, and JavaScript.
