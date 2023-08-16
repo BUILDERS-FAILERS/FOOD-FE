@@ -1,52 +1,52 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    // "next/core-web-vitals",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
-  "overrides": [],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.json"
-  },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
-  "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto" }],
-    "@typescript-eslint/no-use-before-define": "off",
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-static-element-interactions": "off",
-    "react/no-array-index-key": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "react/function-component-definition": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "error",
-    "jsx-a11y/anchor-is-valid": "warn",
-    "import/prefer-default-export": "off",
-    "react-hooks/exhaustive-deps": "off",
-    "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "jsx-a11y/label-has-associated-control": "off",
-    "no-plusplus": "off",
-    "no-param-reassign": "off",
-    "jsx-a11y/interactive-supports-focus": "off",
-    "linebreak-style": "off",
-    "react/no-unstable-nested-components": [
-      "warn",
-      {
-        "allowAsProps": true,
-        "customValidators": [] /* optional array of validators used for propTypes validation */
-      }
-    ]
-  }
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"airbnb",
+		"airbnb-typescript",
+		"airbnb/hooks",
+		// "next/core-web-vitals", // this was commented
+		"plugin:react/recommended",
+		"plugin:prettier/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"overrides": [],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["react", "@typescript-eslint", "prettier"],
+	"rules": {
+		"prettier/prettier": ["error", { "endOfLine": "auto" }],
+		"@typescript-eslint/no-use-before-define": "off",
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/no-static-element-interactions": "off",
+		"react/no-array-index-key": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/prop-types": "off",
+		"react/function-component-definition": "off",
+		"@typescript-eslint/no-unused-vars": "warn",
+		"@typescript-eslint/no-explicit-any": "error",
+		"jsx-a11y/anchor-is-valid": "warn",
+		"import/prefer-default-export": "off",
+		"react-hooks/exhaustive-deps": "off",
+		"jsx-a11y/no-noninteractive-element-interactions": "off",
+		"jsx-a11y/label-has-associated-control": "off",
+		"no-plusplus": "off",
+		"no-param-reassign": "off",
+		"jsx-a11y/interactive-supports-focus": "off",
+		"linebreak-style": "off",
+		"react/no-unstable-nested-components": [
+			"warn",
+			{
+				"allowAsProps": true,
+				"customValidators": [] /* optional array of validators used for propTypes validation */
+			}
+		]
+	}
 }
