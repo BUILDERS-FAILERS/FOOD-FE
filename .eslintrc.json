@@ -7,7 +7,7 @@
 		"airbnb",
 		"airbnb-typescript",
 		"airbnb/hooks",
-		// "next/core-web-vitals", // this was commented
+		// "next/core-web-vitals", // this was commented because ESLint couldn't determine the plugin "react-hooks" uniquely.
 		"plugin:react/recommended",
 		"plugin:prettier/recommended",
 		"plugin:@typescript-eslint/recommended",
