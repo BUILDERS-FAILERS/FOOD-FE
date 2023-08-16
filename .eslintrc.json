@@ -8,7 +8,9 @@
     "airbnb-typescript",
     "airbnb/hooks",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -28,6 +30,7 @@
     "react/prop-types": "off",
     "react/function-component-definition": "off",
     "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
     "jsx-a11y/anchor-is-valid": "warn",
     "import/prefer-default-export": "off",
     "react-hooks/exhaustive-deps": "off",
@@ -43,6 +46,6 @@
         "allowAsProps": true,
         "customValidators": [] /* optional array of validators used for propTypes validation */
       }
-]
+    ]
   }
 }
