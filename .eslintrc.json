@@ -7,7 +7,6 @@
 		"airbnb",
 		"airbnb-typescript",
 		"airbnb/hooks",
-		// "next/core-web-vitals", // this was commented because ESLint couldn't determine the plugin "react-hooks" uniquely. The solution:"Please remove the "plugins" setting from either config or remove either plugin installation."
 		"plugin:react/recommended",
 		"plugin:prettier/recommended",
 		"plugin:@typescript-eslint/recommended",
@@ -41,12 +40,7 @@
 		"no-param-reassign": "off",
 		"jsx-a11y/interactive-supports-focus": "off",
 		"linebreak-style": "off",
-		"react/no-unstable-nested-components": [
-			"warn",
-			{
-				"allowAsProps": true,
-				"customValidators": [] /* optional array of validators used for propTypes validation */
-			}
-		]
+		"import/extensions": "warn",
+		"react/jsx-props-no-spreading": "off"
 	}
 }

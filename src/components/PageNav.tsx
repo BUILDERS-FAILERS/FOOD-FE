@@ -9,19 +9,19 @@ export default function PageNav() {
 				<ul className="w-full flex items-center h-full justify-between list-none">
 					<li>
 						{" "}
-						<Link href="#"> How it works </Link>{" "}
+						<Link href="/"> How it works </Link>{" "}
 					</li>
 					<li>
 						{" "}
-						<Link href="#"> Restaurants </Link>{" "}
+						<Link href="/"> Restaurants </Link>{" "}
 					</li>
 					<li>
 						{" "}
-						<Link href="#"> Support </Link>{" "}
+						<Link href="/"> Support </Link>{" "}
 					</li>
 					<li>
 						{" "}
-						<Link href="#"> Products </Link>{" "}
+						<Link href="/"> Products </Link>{" "}
 					</li>
 				</ul>
 			</nav>
