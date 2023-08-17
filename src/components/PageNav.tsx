@@ -4,8 +4,8 @@ import { Button } from "./ui/button"
 export default function PageNav() {
 	return (
 		<div className="flex w-full items-center justify-between">
-			<div className="font-semibold text-xl"> wareg. </div>
-			<nav className="w-full text-white max-w-[450px] items-center justify-center bg-tab-color px-6 text-xs rounded-3xl py-2 h-12">
+			<div className="font-bold text-xl lg:text-2xl text-white"> wareg. </div>
+			<nav className="hidden lg:block w-full text-white max-w-[500px] items-center justify-center bg-tabColor px-6 text-xs rounded-3xl py-2 h-12">
 				<ul className="w-full flex items-center h-full justify-between list-none">
 					<li>
 						{" "}
@@ -25,8 +25,8 @@ export default function PageNav() {
 					</li>
 				</ul>
 			</nav>
-			<div className="flex space-x-3 items-center">
-				<Button className="bg-primary text-xs text-white rounded-3xl px-6 h-9">
+			<div className="hidden lg:flex items-center">
+				<Button className="bg-white font-bold text-xs text-button rounded-3xl px-6 h-9">
 					{" "}
 					Download App{" "}
 				</Button>
