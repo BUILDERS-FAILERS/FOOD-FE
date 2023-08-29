@@ -1,87 +1,35 @@
-## Frontend Architecture:
+## CHOWFAST-FE
 
-### Deliverables:
+### OVERVIEW
+This is the front-facing interface for Chowfast built using Nextjs, Tailwind and ShadCN component library, It also doubles as a PWA pending the time that we have our mobile application fully up and running. Linting is set-up with Eslint and Husky has also been added to help manage our github commits.
 
-1. **User Interface Design (UI):**
+### CONTRIBUTION APPROACH
+The aim of any written software or program is to be totally definitive with nothing obscure or left to doubt (A function should be able to tell it's story without redundant comments), perfomant ( Efficiency is key to any application, so we want to keep our code minimal and deliver the best product as well.), and examinable ( Every single use case must pass leaving nothing to stray).
 
-   - Wireframes and mockups of user interfaces for customer and restaurant modules.
-   - UI design that focuses on user-friendliness, responsiveness, and a seamless ordering experience.
+### SEPERATION OF CONCERNS
 
-2. **Customer-Facing App:**
+#### COMPONENTS
+All components are to be in the ```component``` directory. This would also be subdivided into global components and page-sectioned components.
+    - The ```component/ui``` directory contains components imported from the shadcn library.
+    - Global components are to be in the ```component/global``` directory.
+    - Components local to a page are to be in ```component/<page-where-component-exists>```.
 
-   - Customer registration and login functionality.
-   - Browse restaurants and menus with filtering and sorting options.
-   - Shopping cart for adding/removing items and adjusting quantities.
-   - Secure payment gateway integration.
-   - Order history and tracking.
+#### UTILITY FUNCTIONS AND HOOKS
+- Utility functions are to exist in the ```lib/utils``` directory.
+  - This directory would have subdirectories that house a single file where the functions are written. For example, If we had a sign-in, user-registration function, we'll have a ```lib/utils/auth``` directory with a single ```index.ts``` file where all these functions would be written.
+- Hooks are to exist in the ```lib/hooks``` directory.
+  - This directory houses the different custom hooks written, for example hooks related to ```auth``` would be in a ```useAuth.ts``` hook in the ```lib/hooks``` directory.
 
-3. **Restaurant Management App:**
+##### CONTEXT
+State that are required globally and within certain contexts are to be in the ```context``` directory, ```ThemeProviders``` and other providers that would be required would be written in seperate files.
 
-   - Restaurant registration and login functionality.
-   - Menu management with the ability to add/edit/delete items and update availability.
-   - Order management system for accepting and preparing orders.
-   - Real-time notifications for new orders.
+#### STATES
+As state management is very vital in any working application, The state of the application is to be managed using Redux-Toolkit (RTK). There is to be a ```slices``` directory that contains the seperate slices of state of the application. Each state to be managed is to have a directory for it's slices ```profileSlice``` directory would contain all necessary files for the ```profile``` state.
 
-4. **Delivery Driver App:**
+![image](https://github.com/ChowFast/CHOWFAST-FE/assets/56235240/4234eae6-72ef-443d-b50e-4093684c5154)     &nbsp; &nbsp;     ![image](https://github.com/ChowFast/CHOWFAST-FE/assets/56235240/95473f3c-b224-4633-979e-29bab05bea3d)
 
-   - Registration and login for delivery drivers.
-   - Real-time order assignment and navigation to delivery locations.
-   - Order status updates and interaction with customers (e.g., confirmations).
 
-5. **User Experience Enhancements:**
-   - Location-based services for accurate delivery tracking.
-   - Push notifications for order updates.
-   - Ratings and reviews for restaurants and delivery drivers.
+As seen in the iamge above, Here's how the folder structure would look.
 
----
-
-## Backend Architecture:
-
-### Deliverables:
-
-1. **Server Setup and Hosting:**
-
-   - Choose appropriate hosting services (e.g., AWS, Azure, etc.) for scalability and reliability.
-   - Set up server infrastructure to handle user requests and data storage.
-
-2. **API Development:**
-
-   - Design and develop RESTful APIs for communication between frontend and backend.
-   - APIs for user authentication, menu retrieval, order placement, order status updates, etc.
-
-3. **Database Management:**
-
-   - Database design and setup to store user profiles, restaurants, menus, orders, and delivery details.
-   - Implement data models, relationships, and data access layers.
-
-4. **Authentication and Security:**
-
-   - Implement secure user authentication and authorization mechanisms.
-   - Utilize encryption and secure protocols for data transmission.
-
-5. **Payment Gateway Integration:**
-
-   - Integrate with a secure payment gateway to handle online payments.
-   - Ensure PCI compliance and secure handling of sensitive payment information.
-
-6. **Real-Time Features:**
-
-   - Implement real-time functionality for order notifications and tracking.
-   - Use technologies like WebSockets or server-sent events for real-time updates.
-
-7. **Third-Party Integrations:**
-
-   - Integrate with external services for map navigation, geolocation, and possibly third-party delivery services.
-
-8. **Performance Optimization:**
-
-   - Implement caching mechanisms for frequently accessed data.
-   - Optimize database queries and use indexing where necessary.
-
-9. **Error Handling and Logging:**
-
-   - Implement robust error handling and logging to identify and troubleshoot issues.
-
-10. **Scalability and Load Testing:**
-    - Design the backend to handle a growing number of users and orders.
-    - Perform load testing to ensure system stability under heavy traffic.
+#### VERSION CONTROL 
+To keep our applications stable, Our codebase is to be in 3 branches, ```main```, ```dev```, ```test```. The ```main``` branch is the front-facing application for our consumers, It contains the ```LTS``` version of our application. The ```test``` branch is for the product manager to test exhaustively the features of our application, prior to pushing it to ```main```. The ```prod``` branch is what the devs are to work on. I'm debating whether we should have multiple brnaches per feature and have them merged and the branch deleted after, but I'd like no clutter.
