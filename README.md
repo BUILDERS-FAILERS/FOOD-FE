@@ -10,7 +10,7 @@ The aim of any written software or program is to be totally definitive with noth
 
 #### COMPONENTS
 All components are to be in the ```component``` directory. This would also be subdivided into global components and page-sectioned components.
-    - The ```component\ui``` directory contains components imported from the shadcn library.
+    - The ```component/ui``` directory contains components imported from the shadcn library.
     - Global components are to be in the ```component/global``` directory.
     - Components local to a page are to be in ```component/<page-where-component-exists>```.
 
